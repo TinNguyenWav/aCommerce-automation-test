@@ -1,0 +1,17 @@
+require: "@babel/register"
+retries: 1
+slow: "75" # test duration and flag tests that are slow (default: 75ms)
+sort: false
+spec:
+  - "test/**/retrieve-latest-quantity.spec.js" # the positional arguments!
+timeout: "50000" # same as "timeout: '50s'"
+# timeout: false # same as "timeout: 0"
+trace-warnings: true # node flags ok
+ui: "bdd"
+v8-stack-trace-limit: 100 # V8 flags are prepended with "v8-"
+watch: false
+watch-files:
+  - "lib/**/*.js"
+  - "test/**/*.js"
+watch-ignore:
+  - "lib/vendor"
